@@ -9,7 +9,11 @@ Source code for our work soon to be published at RA-L:
   author = {Lucas Nunes and Rodrigo Marcuzzi and Xieyuanli Chen and Jens Behley and Cyrill Stachniss},
   title = {{SegContrast: 3D Point Cloud Feature Representation Learning through Self-supervised Segment Discrimination}},
   journal = {IEEE Robotics and Automation Letters (RA-L)},
-  year = 2022
+  year = {2022},
+  volume = {7},
+  number = {2},
+  pages = {2116-2123},
+  doi={10.1109/LRA.2022.3142440}
 }
 ```
 
