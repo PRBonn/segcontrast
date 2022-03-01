@@ -17,7 +17,6 @@ sparse_models = {
     'SparseResNet50': SparseResNet50,
     'SparseResNet101': SparseResNet101,
     'MinkUNet': MinkUNet,
-    'MinkUNetSMLP': MinkUNetSMLP,
     'MinkUNet14': MinkUNet14,
     'MinkUNet18': MinkUNet18,
     'MinkUNet34': MinkUNet34,
