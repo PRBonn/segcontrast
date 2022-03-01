@@ -16,7 +16,7 @@ Installing MinkowskiEngine with CUDA support:
 
 # SegContrast with Docker
 
-Inside the `docker/` directory there is a `Dockerfile` to build an image to run SegContrast. You can either build the image from scratch or download the image from docker hub by:
+Inside the `docker/` directory there is a `Dockerfile` to build an image to run SegContrast. You can build the image from scratch or download the image from docker hub by:
 
 ```
 docker pull nuneslu/segcontrast:minkunet
