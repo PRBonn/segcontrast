@@ -4,7 +4,6 @@ from collections import OrderedDict
 import torch
 import torch.nn as nn
 import MinkowskiEngine as ME
-from models.smlp import SMLP
 
 __all__ = ['MinkUNet']
 
