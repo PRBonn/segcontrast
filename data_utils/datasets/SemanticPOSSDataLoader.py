@@ -139,7 +139,6 @@ class SemanticPOSSDataLoader(Dataset):
         return points_i, points_j
 
     def _get_item(self, index):
-        # /home/lucas/Downloads/SemanticPOSS_dataset/dataset/sequences/04/velodyne/000479.bin
         points_set = np.fromfile(self.points_datapath[index], dtype=np.float32)
         points_set = points_set.reshape((-1, 4))
 
