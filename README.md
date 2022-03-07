@@ -56,11 +56,11 @@ Download [SemanticKITTI](http://www.semantic-kitti.org/dataset.html#download) in
 # Pretrained Weights
 - SegContrast pretraining [weights](https://www.ipb.uni-bonn.de/html/projects/segcontrast/segcontrast_pretrain.zip)
 - Fine-tuned semantic segmentation
-    - 0.1% labels (https://www.ipb.uni-bonn.de/html/projects/segcontrast/semantic_segmentation_weights/semseg_finetune_0p001.zip)
-    - 1% labels (https://www.ipb.uni-bonn.de/html/projects/segcontrast/semantic_segmentation_weights/semseg_finetune_0p01.zip)
-    - 10% labels (https://www.ipb.uni-bonn.de/html/projects/segcontrast/semantic_segmentation_weights/semseg_finetune_0p1.zip)
-    - 50% labels (https://www.ipb.uni-bonn.de/html/projects/segcontrast/semantic_segmentation_weights/semseg_finetune_0p5.zip)
-    - 100% labels (https://www.ipb.uni-bonn.de/html/projects/segcontrast/semantic_segmentation_weights/semseg_finetune_1p0.zip)
+    - 0.1% labels [weights](https://www.ipb.uni-bonn.de/html/projects/segcontrast/semantic_segmentation_weights/semseg_finetune_0p001.zip)
+    - 1% labels [weights](https://www.ipb.uni-bonn.de/html/projects/segcontrast/semantic_segmentation_weights/semseg_finetune_0p01.zip)
+    - 10% labels [weights](https://www.ipb.uni-bonn.de/html/projects/segcontrast/semantic_segmentation_weights/semseg_finetune_0p1.zip)
+    - 50% labels [weights](https://www.ipb.uni-bonn.de/html/projects/segcontrast/semantic_segmentation_weights/semseg_finetune_0p5.zip)
+    - 100% labels [weights](https://www.ipb.uni-bonn.de/html/projects/segcontrast/semantic_segmentation_weights/semseg_finetune_1p0.zip)
 
 # Reproducing the results
 
