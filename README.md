@@ -94,6 +94,12 @@ Then for fine-tuning:
 ./tools/downstream_train.sh
 ```
 
+Finally, to compute the IoU metrics use:
+
+```
+./tools/eval_train.sh
+```
+
 # Citation
 
 If you use this repo, please cite as :
