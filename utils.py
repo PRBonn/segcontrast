@@ -3,25 +3,13 @@ import numpy as np
 from data_utils.collations import SparseAugmentedCollation, SparseCollation
 from data_utils.datasets.SemanticKITTIDataLoader import SemanticKITTIDataLoader
 from data_utils.datasets.SemanticPOSSDataLoader import SemanticPOSSDataLoader
-from models.resnet import *
-from models.uresnet import *
 from models.minkunet import *
 from models.moco import *
-from models.blocks import ProjectionHead
+from models.blocks import ProjectionHead, SegmentationClassifierHead
 from data_utils.data_map import content, content_indoor
 
 sparse_models = {
-    'SparseResNet14': SparseResNet14,
-    'SparseResNet18': SparseResNet18,
-    'SparseResNet34': SparseResNet34,
-    'SparseResNet50': SparseResNet50,
-    'SparseResNet101': SparseResNet101,
     'MinkUNet': MinkUNet,
-    'MinkUNet14': MinkUNet14,
-    'MinkUNet18': MinkUNet18,
-    'MinkUNet34': MinkUNet34,
-    'MinkUNet50': MinkUNet50,
-    'MinkUNet101': MinkUNet101,
 }
 
 data_loaders = {

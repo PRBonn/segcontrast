@@ -216,13 +216,13 @@ class SemanticKITTITrainer(pl.LightningModule):
 
         if self.params.contrastive:
             # load model, best loss and optimizer
-            file_name = f'{self.params.log_dir}/../contrastive/lastepoch199_model_{self.params.checkpoint}.pt'
+            file_name = f'{self.params.log_dir}/../contrastive/lastepoch199_model_segment_contrast.pt'
             checkpoint = torch.load(file_name, map_location='cuda:0')
             self.model.load_state_dict(checkpoint['model'])
             print(f'Contrastive {file_name} loaded from epoch {checkpoint["epoch"]}')
         else:
             # load model, best loss and optimizer
-            file_name = f'{self.params.log_dir}/lastepoch199_model_{self.params.checkpoint}.pt'
+            file_name = f'{self.params.log_dir}/lastepoch199_model_segment_contrast.pt'
             checkpoint = torch.load(file_name)
             self.model.load_state_dict(checkpoint['model'])
             self.train_step = checkpoint['train_step']
@@ -232,7 +232,7 @@ class SemanticKITTITrainer(pl.LightningModule):
             print(f'{file_name} loaded from epoch {checkpoint["epoch"]}')
             
             # load model head
-            file_name = f'{self.params.log_dir}/lastepoch199_model_head_{self.params.checkpoint}.pt'
+            file_name = f'{self.params.log_dir}/lastepoch199_model_head_segment_contrast.pt'
             checkpoint = torch.load(file_name)
             self.model_head.load_state_dict(checkpoint['model'])
 
