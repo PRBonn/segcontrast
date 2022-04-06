@@ -1,5 +1,7 @@
 # SegContrast
 
+**[Paper](http://www.ipb.uni-bonn.de/pdfs/nunes2022ral-icra.pdf)** **|** **[Video](https://www.youtube.com/watch?v=kotRb_ySnIw)**
+
 ![](pics/overview.png)
 
 Installing pre-requisites:
