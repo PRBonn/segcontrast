@@ -78,7 +78,19 @@ def clusterize_pcd(points, n_clusters):
 
     return np.concatenate((points, labels), axis=-1)
 
-def visualize_pcd_clusters(point_set, pi, pj):
+def visualize_pcd_clusters(point_set):
+    pcd = o3d.geometry.PointCloud()
+    pcd.points = o3d.utility.Vector3dVector(point_set[:,:3])
+
+    labels = point_set[:, -1]
+    import matplotlib.pyplot as plt
+    colors = plt.get_cmap("prism")(labels / (labels.max() if labels.max() > 0 else 1))
+    colors[labels < 0] = 0
+
+    pcd.colors = o3d.utility.Vector3dVector(colors[:, :3])
+    o3d.visualization.draw_geometries([pcd])
+
+def visualize_pcd_clusters_compare(point_set, pi, pj):
     pcd_ = o3d.geometry.PointCloud()
     pcd_.points = o3d.utility.Vector3dVector(point_set[:,:3])
 
