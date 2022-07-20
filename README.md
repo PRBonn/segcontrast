@@ -110,7 +110,7 @@ If you use this repo, please cite as :
 @article{nunes2022ral,
     author = {L. Nunes and R. Marcuzzi and X. Chen and J. Behley and C. Stachniss},
     title = {{SegContrast: 3D Point Cloud Feature Representation Learning through Self-supervised Segment Discrimination}},
-    journal = ral,
+    journal = {{IEEE Robotics and Automation Letters (RA-L)}},
     year = 2022,
     doi = {10.1109/LRA.2022.3142440},
     issn = {2377-3766},
