@@ -41,7 +41,7 @@ def get_model(args, dtype, pre_training=False):
     )#.type(dtype)
 
 def get_projection_head(args, dtype):
-    return ProjectionHead(in_channels=latent_features[args.sparse_model], out_channels=args.feature_size).type(dtype)
+    return ProjectionHead(in_channels=latent_features[args.sparse_model], out_channels=args.feature_size)#.type(dtype)
 
 def get_moco_model(args, dtype):
     return MoCo(sparse_models[args.sparse_model], ProjectionHead, dtype, args)
