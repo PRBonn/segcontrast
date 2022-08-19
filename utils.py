@@ -38,7 +38,7 @@ def get_model(args, dtype, pre_training=False):
     return sparse_models[args.sparse_model](
         in_channels=4 if args.use_intensity else 3,
         out_channels=latent_features[args.sparse_model],
-    ).type(dtype)
+    )#.type(dtype)
 
 def get_projection_head(args, dtype):
     return ProjectionHead(in_channels=latent_features[args.sparse_model], out_channels=args.feature_size).type(dtype)
