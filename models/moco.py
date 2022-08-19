@@ -25,11 +25,11 @@ class MoCo(nn.Module):
         self.m = m
         self.T = T
 
-        self.model_q = model(in_channels=4 if args.use_intensity else 3, out_channels=latent_features[args.sparse_model]).type(dtype)
-        self.head_q = model_head(in_channels=latent_features[args.sparse_model], out_channels=args.feature_size).type(dtype)
+        self.model_q = model(in_channels=4 if args.use_intensity else 3, out_channels=latent_features[args.sparse_model])#.type(dtype)
+        self.head_q = model_head(in_channels=latent_features[args.sparse_model], out_channels=args.feature_size)#.type(dtype)
 
-        self.model_k = model(in_channels=4 if args.use_intensity else 3, out_channels=latent_features[args.sparse_model]).type(dtype)
-        self.head_k = model_head(in_channels=latent_features[args.sparse_model], out_channels=args.feature_size).type(dtype)
+        self.model_k = model(in_channels=4 if args.use_intensity else 3, out_channels=latent_features[args.sparse_model])#.type(dtype)
+        self.head_k = model_head(in_channels=latent_features[args.sparse_model], out_channels=args.feature_size)#.type(dtype)
 
         # initialize model k and q
         for param_q, param_k in zip(self.model_q.parameters(), self.model_k.parameters()):
