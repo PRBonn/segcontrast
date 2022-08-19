@@ -50,11 +50,11 @@ def get_classifier_head(args, dtype):
     if 'UNet' in args.sparse_model:
         return SegmentationClassifierHead(
                 in_channels=latent_features[args.sparse_model], out_channels=data_class[args.dataset_name]
-            ).type(dtype)
+            )#.type(dtype)
     else:
         return ClassifierHead(
                 in_channels=latent_features[args.sparse_model], out_channels=data_class[args.dataset_name]
-            ).type(dtype)
+            )#.type(dtype)
 
 def get_optimizer(optim_params, args):
     if 'UNet' in args.sparse_model:
