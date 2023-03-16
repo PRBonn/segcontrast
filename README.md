@@ -16,6 +16,8 @@ Installing MinkowskiEngine with CUDA support:
 
 `pip3 install -U MinkowskiEngine==0.5.4 --install-option="--blas=openblas" -v --no-deps`
 
+**Note:** We have released a new representation learning method based on temporal associations ([TARL](https://github.com/PRBonn/TARL)) that achieves better performance than SegContrast.
+
 # SegContrast with Docker
 
 Inside the `docker/` directory there is a `Dockerfile` to build an image to run SegContrast. You can build the image from scratch or download the image from docker hub by:
