@@ -19,8 +19,8 @@ if __name__ == "__main__":
                         help='input training batch-size')
     parser.add_argument('--epochs', type=int, default=15, metavar='N',
                         help='number of training epochs (default: 15)')
-    parser.add_argument('--lr', type=float, default=2.4e-1,
-                        help='learning rate (default: 2.4e-1')
+    parser.add_argument('--lr', type=float, default=1e-3,
+                        help='learning rate (default: 1e-3')
     parser.add_argument("--decay-lr", default=1e-4, action="store", type=float,
                         help='Learning rate decay (default: 1e-4')
     parser.add_argument('--tau', default=0.1, type=float,

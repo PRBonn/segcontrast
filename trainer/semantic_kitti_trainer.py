@@ -283,31 +283,10 @@ class SemanticKITTITrainer(pl.LightningModule):
             optim_params = list(self.model_head.parameters())
             self.model.eval()
 
-        #optimizer = torch.optim.Adam(optim_params, lr=self.params.lr, weight_decay=self.params.decay_lr)
-        optimizer = torch.optim.SGD(
-            optim_params, lr=self.params.lr, momentum=0.9, weight_decay=self.params.decay_lr, nesterov=True
-        )
-
-        def cosine_schedule_with_warmup(k, num_epochs, batch_size, dataset_size):
-            iter_per_epoch = (dataset_size + batch_size - 1) // batch_size
-            return 0.5 * (1 + cos(pi * k /
-                                    (num_epochs * iter_per_epoch)))
-
-        scheduler = torch.optim.lr_scheduler.LambdaLR(
-            optimizer, lr_lambda=partial(
-                cosine_schedule_with_warmup,
-                num_epochs=self.params.epochs,
-                batch_size=self.params.batch_size,
-                dataset_size=len(self.train_loader) * self.params.batch_size,
-            )
-        )
-
-        #scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, self.params.lr, eta_min=self.params.lr / 1000)
-
+        optimizer = torch.optim.AdamW(optim_params, lr=self.params.lr)
         self.optimizer = optimizer
-        self.scheduler = scheduler
 
-        return [optimizer], [scheduler]
+        return optimizer
 
     def compute_grad(self):
         param_count = 0
